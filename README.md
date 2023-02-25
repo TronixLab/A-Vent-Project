@@ -22,20 +22,11 @@ The A-vent unit was modified and made it smaller for transportation ease of the 
 
 The idea of the A-vent development phase was shift to the creation a modular alarm device can be suitable for any ventilator machines. The modular alarm device for open-source ventilator was first demonstrated by Illinois University, the project called [Illinois RapidAlarm](https://rapidvent.grainger.illinois.edu/rapidalarm). The Illinois RapidAlarm[[1](https://rapidalarm.github.io/#!index.md)] is a sensor and alarm module for use with emergency pressure-cycled ventilators such as the Illinois RapidVent that do not have built-in monitoring systems. The module connects to a ventilator circuit and monitors the pressure delivered to the patient airway. It produces an audible alarm when it detects a problem with the ventilator, such as a disconnection or obstruction, and also displays information about airway pressure and breathing rate. They published IEEE paper, [*Low-Complexity System and Algorithm for an Emergency Ventilator Sensor and Alarm*,](https://ieeexplore.ieee.org/document/9184284) reports the team’s work to build a low-cost, easy-to-produce electronic sensor and alarm system for pressure-cycled ventilators. The devices estimate clinically useful metrics, such as pressure and respiratory rate, and sound an alarm when the ventilator malfunctions.
 
-The same algorithm was applied to A-vent alarm system, not only for pressure cycle, and flow rate, also applied for tidal volume alarm. Moreover, we added the applied Artificial Intelligence called TinyML for the recognition of PVA and machine problems with anomaly detection that will generate alarm in such event. This intelligent monitoring of mechanical ventilator will help hospital to monitor the critically-ill patients in real-time and assist healthcare workers that may reduce their workload. We presented a paper titled *Waveform Tracker Alarm for Automatic Patient-Ventilator Asynchrony (PVA) and Mechanical State Recognition for Mechanical Ventilators Using Embedded Deep Learning* at [11th ICMCE (International Conference on Mechatronics and Control Engineering)](http://www.icmce.org/) 2023. In this paper, we demonstrated the detection of various type of PVA and machine problems, the event was emulated and generate an alarm signal in near real-time due to possitive alarm sequencing that avoid triggering of false alarm.
+The same algorithm was applied to A-vent alarm system, not only for pressure cycle, and flow rate, also applied for tidal volume alarm. Moreover, we added the applied Artificial Intelligence called TinyML for the recognition of PVA and machine problems with anomaly detection that will generate alarm in such event. This intelligent monitoring of mechanical ventilator will help hospital to monitor the critically-ill patients in real-time and assist healthcare workers that may reduce their workload. We presented a paper titled *Waveform Tracker Alarm for Automatic Patient-Ventilator Asynchrony (PVA) and Mechanical State Recognition for Mechanical Ventilators Using Embedded Deep Learning* at 11th [ICMCE (International Conference on Mechatronics and Control Engineering)](http://www.icmce.org/) 2023. In this paper, we demonstrated the detection of various type of PVA and machine problems, the event was emulated and generate an alarm signal in near real-time due to possitive alarm sequencing that avoid triggering of false alarm.
 
 <img src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/PVA%20alarm.png" width="45%"></img> <img src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/Machine%20alarm.png" width="45%"></img>
 
+## Phase 3
+In this development phase is the application of wireless sensor network, and IoT combined with the intelligent alarm device. It demonstrate a digital replica of the system through a remote dashboard called Digital Twin. It stored the data on the local server database and display the ventilator waveform and diagnosis on the web dashboard that can be access through a WLAN (wireless local area network).
 
-
-
-
-The design and development of A-vent was inspired by
-
-
-
-
-
-The A-vent unit can delivered a pressurized air with constant rate controlled by microprocessor unit
-
-This repository emphasize the intelligent alarm device for detecting patient-ventilator asynchrony (PVA) and wireless sensor for remote monitoring of machine and patient interaction. 
+<img src="[https://github.com/TronixLab/A-Vent-Project/blob/main/media/PVA%20alarm.png](https://github.com/TronixLab/A-Vent-Project/blob/main/media/avent%203.1.jpg)" width="45%"></img> <img src="[https://github.com/TronixLab/A-Vent-Project/blob/main/media/Machine%20alarm.png](https://github.com/TronixLab/A-Vent-Project/blob/main/media/dashboard.png)" width="45%"></img>
