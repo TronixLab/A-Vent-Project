@@ -30,3 +30,7 @@ The same algorithm was applied to A-vent alarm system, not only for pressure cyc
 In this development phase is the application of wireless sensor network, and IoT combined with the intelligent alarm device. It demonstrate a digital replica of the system through a remote dashboard called Digital Twin. It stored the data on the local server database and display the ventilator waveform and diagnosis on the web dashboard that can be access through a WLAN (wireless local area network).
 
 <img src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/avent%203.1.jpg" width="45%"></img> <img src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/dashboard.png" width="45%"></img>
+
+The dashboard consist of place holder images that represent the physical system. This this way, the data on the dashboard can be easily comprehended and to interpret. TinyML approach for ventilator machine alarm system demonstrated an decentralized processing or edge computing of the data, ensure the real-time operation for time-constrained applications are critical for medical devices.
+
+# Parts
