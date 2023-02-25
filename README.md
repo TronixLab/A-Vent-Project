@@ -29,4 +29,4 @@ The same algorithm was applied to A-vent alarm system, not only for pressure cyc
 ## Phase 3
 In this development phase is the application of wireless sensor network, and IoT combined with the intelligent alarm device. It demonstrate a digital replica of the system through a remote dashboard called Digital Twin. It stored the data on the local server database and display the ventilator waveform and diagnosis on the web dashboard that can be access through a WLAN (wireless local area network).
 
-<img src="[https://github.com/TronixLab/A-Vent-Project/blob/main/media/PVA%20alarm.png](https://github.com/TronixLab/A-Vent-Project/blob/main/media/avent%203.1.jpg)" width="45%"></img> <img src="[https://github.com/TronixLab/A-Vent-Project/blob/main/media/Machine%20alarm.png](https://github.com/TronixLab/A-Vent-Project/blob/main/media/dashboard.png)" width="45%"></img>
+<img src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/avent%203.1.jpg" width="45%"></img> <img src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/dashboard.png" width="45%"></img>
