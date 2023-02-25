@@ -13,6 +13,10 @@ src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/avent%201.3.jpg
 src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/avent%201.4.jpg" width="18%"></img>  <img 
 src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/avent%201.5.jpg" width="18%"></img>
 
+A-vent was designed and development through the leadership of Engr. [Paul M. Cabacungan](https://2012.ateneo.edu/ls/sose/ateneo-innovation-center/faculty/paul-m-cabacungan) - AIC Operation Manager together with Mr. Reymond Cao and research assistant. The initial developement was made of easily available food-grade and low-cost materials, and enough to demonstrated a minimum viable prototype. Along with the 1st development phase, we published a paper titled [Design and Development of A-vent: A Low-Cost Ventilator with Cost-Effective Mobile Cloud Caching and Embedded Machine Learning](https://ieeexplore.ieee.org/document/9550920). This paper demonstrate the A-vent minimum viable prototype and integration of AIC technologies such Mobile and Near Cloud Computing, and Machine Learning that predicts the type of PVA as proof of concept.
+
+## Phase 2
+
 
 The design and development of A-vent was inspired by
 
