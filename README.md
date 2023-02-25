@@ -44,4 +44,20 @@ The dashboard consist of place holder images that represent the physical system.
 ![Schematic Diagram](https://github.com/TronixLab/A-Vent-Project/blob/main/media/Schematic%20Diagram.png)
 
 # Dependencies
+## Documentation
+Prior to the replication of the prototype, it is important to read and study the following documentation for your reference.
+* [Getting Started with ESP32](https://github.com/TronixLab/DOIT_ESP32_DevKit-v1_30P)
+* [ESP32 Real-Time Operating System (FreeRTOS)](https://github.com/TronixLab/introduction-to-rtos)
+* [MPX2010DP](https://github.com/TronixLab/MPX2010DP)
+* [SFM3300](https://github.com/TronixLab/SFM3300)
+* [BLE Fingertip Pulse Oximeter](https://github.com/TronixLab/BLE-Fingertip-Pulse-Oximeter-Jumper-Medical-)
+
+## Arduino Libraries
+See Arduino Documentation for [Installing Libraries](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries). Add the following libraries to your Arduino IDE.
+* [PubSubClient](https://github.com/knolleary/pubsubclient)
+* [ArduinoJson](https://github.com/bblanchon/ArduinoJson)
+* [Adafruit_ADS1X15](https://github.com/adafruit/Adafruit_ADS1X15)
+* [MovingAverageFloat](https://github.com/pilotak/MovingAverageFloat)
+* [A-Vent_PVA_Detection_inferencing]()
+
 
