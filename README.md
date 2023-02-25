@@ -60,4 +60,9 @@ See Arduino Documentation for [Installing Libraries](https://docs.arduino.cc/sof
 * [MovingAverageFloat](https://github.com/pilotak/MovingAverageFloat)
 * [A-Vent_PVA_Detection_inferencing](https://github.com/TronixLab/A-Vent-Project/blob/main/libraries/ei-a-vent-pva-detection-arduino-1.0.6.zip)
 
+## Software
+The following software needed to install are:
+* [Arduino IDE](https://docs.arduino.cc/software/ide-v1)
+* [Eclipse Mosquitto MQTT Broker](https://mosquitto.org/)
+* 
 
