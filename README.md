@@ -33,4 +33,12 @@ In this development phase is the application of wireless sensor network, and IoT
 
 The dashboard consist of place holder images that represent the physical system. This this way, the data on the dashboard can be easily comprehended and to interpret. TinyML approach for ventilator machine alarm system demonstrated an decentralized processing or edge computing of the data, ensure the real-time operation for time-constrained applications are critical for medical devices.
 
-# Parts
+# Main Components (Phase 2/3)
+* [ESP32 DevKit Board](https://circuit.rocks/esp32-wifi-ble.html)
+* [MPX5010DP Differential Pressure Sensor](https://www.digikey.com/en/products/detail/nxp-usa-inc/MPX5010DP/464054)
+* [SFM3300 Sensirion Flow Meter](https://www.digikey.ph/en/products/detail/sensirion-ag/SFM3300-250-D/9857673)
+* [4-Channel 16-bit Analog-to-Digital Converter Module](https://circuit.rocks/adc-16-bit-4-channel-ads1115-with-programmable-gain-amplifier)
+* [4-Channel Logic Level Bidirectional Converter (3.3V/5V)](https://circuit.rocks/logic-converter-4-chanel-5v-3v)
+
+# Dependencies
+
