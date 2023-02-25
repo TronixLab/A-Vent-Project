@@ -69,4 +69,52 @@ The following software needed to install are:
 * [PostgreSQL](https://www.postgresql.org/)
 
 # Software Installation
+### Installing Mosquitto MQTT Broker on Window
+To install the MQTT Broker on a Windows computer, please follow the steps below.
+* 1. Download the MQTT Broker, version 1.6.x, and earlier are recommended for ease of use. [Download link](https://mosquitto.org/download/).
+* 2. After downloading, double-click on the downloaded .exe file and follow the installation process.
+* 3. Open Command Prompt as Administrator. Go to the folder/Path where you installed your broker. During the installation, please refer to the installation directory. In the Command Prompt run the following command according to your Mosquitto installation folder directory.
+```
+cd C:\Program Files\mosquitto
+```
+* 4. Execute the following commands to install Broker and start Mosquitto Service for Windows.
+ ```
+mosquitto install
+net start mosquitto
+```
+This will automatically install the Mosquitto service on Windows. The Mosquitto can be tested by executing the following command.
+```
+mosquitto -h
+mosquitto -v
+```
+* 5. Mosquitto service runs on port 1883 by design. In Windows, make sure port 1883 is available. To do so, open a command prompt and type the following command.
+```
+netstat -a
+```
+This will show all of your Windows computer's active service ports. If 1883 is shown, the port has been successfully opened for communication.
+* 6. Open another Command Prompt as Administrator for publisher and subscriber. Navigate to the Mosquitto installed folder or path as stated in step 4. Execute the following Command to Subscribe to topic test_topic.
+```
+mosquitto_sub -t test_topic -h localhost
+```
+You can not receive data because there is no publisher at this time. To receive data, perform the following publisher steps in another command prompt and then search the subscriber terminal for received data. Execute the following command to Publish the message “Hello World”.
+```
+mosquitto_pub -t test_topic -h localhost -m "Hello World"
+```
+Now check your subscriber Command Prompt, you should get `Hello World`.
+#### Mosquitto CLI Commands and flags
+**Common Commands**
+* `mosquitto` - running the Mosquitto broker.
+* `mosquitto_pub` - command-line utility for publishing messages to a broker.
+* `mosquitto_sub` - command-line utility for subscribing to topics on a broker.
+**Common Flags**
+* `-h` (help) - Display usage information.
+* `-v` (verbose) - Use verbose logging (network status debugging).
+* `-h` (host) - Specify the host to connect to. Defaults to localhost.
+* `-p` (port) - Connect to the port specified. If not given, the default of 1883 for plain MQTT or 8883 for MQTT over TLS will be used.
+* `-m` (message) - Send a single message from the command line.
+* `-t` (topic) - The MQTT topic on which to publish the message.
+
+
+
+
 
