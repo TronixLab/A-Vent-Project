@@ -64,5 +64,9 @@ See Arduino Documentation for [Installing Libraries](https://docs.arduino.cc/sof
 The following software needed to install are:
 * [Arduino IDE](https://docs.arduino.cc/software/ide-v1)
 * [Eclipse Mosquitto MQTT Broker](https://mosquitto.org/)
-* 
+* [Node-RED](https://nodered.org/)
+* [InfluxDB](https://www.influxdata.com/)
+* [PostgreSQL](https://www.postgresql.org/)
+
+# Software Installation
 
