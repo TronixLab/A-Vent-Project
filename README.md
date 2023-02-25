@@ -58,6 +58,6 @@ See Arduino Documentation for [Installing Libraries](https://docs.arduino.cc/sof
 * [ArduinoJson](https://github.com/bblanchon/ArduinoJson)
 * [Adafruit_ADS1X15](https://github.com/adafruit/Adafruit_ADS1X15)
 * [MovingAverageFloat](https://github.com/pilotak/MovingAverageFloat)
-* [A-Vent_PVA_Detection_inferencing]()
+* [A-Vent_PVA_Detection_inferencing](https://github.com/TronixLab/A-Vent-Project/blob/main/libraries/ei-a-vent-pva-detection-arduino-1.0.6.zip)
 
 
