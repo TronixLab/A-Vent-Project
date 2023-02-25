@@ -71,13 +71,13 @@ The following software needed to install are:
 # Software Installation
 ### Installing Mosquitto MQTT Broker on Window
 To install the MQTT Broker on a Windows computer, please follow the steps below.
-* 1. Download the MQTT Broker, version 1.6.x, and earlier are recommended for ease of use. [Download link](https://mosquitto.org/download/).
-* 2. After downloading, double-click on the downloaded .exe file and follow the installation process.
-* 3. Open Command Prompt as Administrator. Go to the folder/Path where you installed your broker. During the installation, please refer to the installation directory. In the Command Prompt run the following command according to your Mosquitto installation folder directory.
+1. Download the MQTT Broker, version 1.6.x, and earlier are recommended for ease of use. [Download link](https://mosquitto.org/download/).
+2. After downloading, double-click on the downloaded .exe file and follow the installation process.
+3. Open Command Prompt as Administrator. Go to the folder/Path where you installed your broker. During the installation, please refer to the installation directory. In the Command Prompt run the following command according to your Mosquitto installation folder directory.
 ```
 cd C:\Program Files\mosquitto
 ```
-* 4. Execute the following commands to install Broker and start Mosquitto Service for Windows.
+4. Execute the following commands to install Broker and start Mosquitto Service for Windows.
  ```
 mosquitto install
 net start mosquitto
@@ -87,12 +87,12 @@ This will automatically install the Mosquitto service on Windows. The Mosquitto 
 mosquitto -h
 mosquitto -v
 ```
-* 5. Mosquitto service runs on port 1883 by design. In Windows, make sure port 1883 is available. To do so, open a command prompt and type the following command.
+5. Mosquitto service runs on port 1883 by design. In Windows, make sure port 1883 is available. To do so, open a command prompt and type the following command.
 ```
 netstat -a
 ```
 This will show all of your Windows computer's active service ports. If 1883 is shown, the port has been successfully opened for communication.
-* 6. Open another Command Prompt as Administrator for publisher and subscriber. Navigate to the Mosquitto installed folder or path as stated in step 4. Execute the following Command to Subscribe to topic test_topic.
+6. Open another Command Prompt as Administrator for publisher and subscriber. Navigate to the Mosquitto installed folder or path as stated in step 4. Execute the following Command to Subscribe to topic test_topic.
 ```
 mosquitto_sub -t test_topic -h localhost
 ```
@@ -113,6 +113,31 @@ Now check your subscriber Command Prompt, you should get `Hello World`.
 * `-p` (port) - Connect to the port specified. If not given, the default of 1883 for plain MQTT or 8883 for MQTT over TLS will be used.
 * `-m` (message) - Send a single message from the command line.
 * `-t` (topic) - The MQTT topic on which to publish the message.
+
+### Installing Node-RED on Windows
+Node-RED can be installed locally on Windows and Linux, as well as the Raspberry Pi. Node-RED was used to subscribe the data to the Mosquitto MQTT broker and parse it to write metrics on the database. This guide details how to install Node-RED in a Windows environment. The steps are only applicable to Windows 10.
+1. From the latest 14.x version of Node.js from the official NodeJS download page, get the new LTS recommended version of the [NodeJS Windows installer](https://nodejs.org/en/download/). To ensure that NodeJS and npm are correctly installed, open a Command Prompt and execute the following command.
+```
+node --version && npm –version
+```
+2. Installing Node-RED as a global module adds the command node-red to your system path. At the command prompt, enter the following:
+```
+npm install -g --unsafe-perm node-red
+```
+3. The command node-red is added to your system path after installing Node-RED as a global module. At the command prompt, enter the following:
+```
+node-red
+```
+The Node-RED log will be output to the terminal as a result. To keep Node-RED going, you must leave the terminal open.
+4. Open the editor in a web browser while Node-RED is running. You can access it using the URL:
+```
+http://localhost:1880
+```
+If you are using a browser on the same computer that is running Node-RED. If you're using a browser on another device, you'll need to enter the IP address of the Node-RED server:
+```
+http://<ip-address>:1880
+```
+For more details, read the Node-RED documentation [here](https://nodered.org/docs/user-guide/editor/).
 
 
 
