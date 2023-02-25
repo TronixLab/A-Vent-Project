@@ -40,5 +40,8 @@ The dashboard consist of place holder images that represent the physical system.
 * [4-Channel 16-bit Analog-to-Digital Converter Module](https://circuit.rocks/adc-16-bit-4-channel-ads1115-with-programmable-gain-amplifier)
 * [4-Channel Logic Level Bidirectional Converter (3.3V/5V)](https://circuit.rocks/logic-converter-4-chanel-5v-3v)
 
+# Schematic Diagram
+![Schematic Diagram](https://github.com/TronixLab/A-Vent-Project/blob/main/media/Schematic%20Diagram.png)
+
 # Dependencies
 
