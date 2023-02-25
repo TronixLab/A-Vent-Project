@@ -201,7 +201,7 @@ Click on `Save and Test`, and make sure that you are not getting any errors. If 
 8. You may load the Grafana dashboard as digital twin system for A-vent project, download the json file [here](https://github.com/TronixLab/A-Vent-Project/blob/main/files/A-VENT%20Digital%20Twin%20Dashboard-Grafana.json), and load it to your Grafana.
 
 # Demonstration
-
+[![GitHub Logo](https://github.com/TronixLab/A-Vent-Project/blob/main/media/youtube.png)](https://www.youtube.com/watch?v=Z4yzic3626o)
 
 
 
