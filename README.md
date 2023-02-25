@@ -137,8 +137,70 @@ If you are using a browser on the same computer that is running Node-RED. If you
 ```
 http://<ip-address>:1880
 ```
-For more details, read the Node-RED documentation [here](https://nodered.org/docs/user-guide/editor/).
+For more details, read the Node-RED documentation [here](https://nodered.org/docs/user-guide/editor/). You may upload the [Node-RED flow](https://github.com/TronixLab/A-Vent-Project/blob/main/files/AVENT_IOT-NODE-RED.json) for project A-vent from your workspace.
 
+**Note**: *Install the following Node-RED palletes `-influxdb`, and `-postgresql`.
+
+### Installing InfluxDB on Windows
+This guide covers all the required steps for a clean InfluxDB installation on a Windows computer. Here you'll find all of the [downloads](https://portal.influxdata.com/downloads/) Telegraf, InfluxDB, Chronograf, and Kapacitor. Each of these tools serves a distinct purpose, such as collecting metrics, storing data, visualizing time series, or performing post-processing functions on your data. This guide will only cover the InfluxDB time-series database component.
+1. Install InfluxDB v1.x Windows Binaries (64-bit) by downloading the installation file. Simply copy and paste the offered link into your browser, and the installation file will be downloaded automatically. For example 'https://dl.influxdata.com/influxdb/releases/influxdb-1.8.5_windows_amd64.zip'
+2. Create a folder let’s name it InfluxDB where you save the Influxdb application file in the Program Files folder or Documents. To avoid Administrator constraints when accessing the files, it is suggested that you move your InfluxDB installation folder to Documents. Inside your folder, create another folder let's name it Influxdb, and extract the installation content files into it.
+3. The system requirements for Influxdb for Windows OS are Win10, 64-bit AMD architecture, and Powershell. You will use Powershell to execute influx and influxd commands. Let’s say that your InfluxDB application file is extracted on 'C:\Program Files\InfluxData\influxdb'. In Powershell, navigate into 'C:\Program Files\InfluxData\influxdb' and start InfluxDB by running the influxd daemon:
+```
+./influxd
+```
+When starting InfluxDB for the first time, Windows Defender will appear with the following message: `Windows Defender Firewall has blocked some features of this app`. Select Private networks, such as my home or work network, then click Allow access.
+Let’s run a quick-dry test to see if everything is okay. Now that your InfluxDB server has started, start a new Command Prompt and execute the following command.
+```
+curl -sl -I http://localhost:8086/ping
+```
+The /ping endpoint is used to check if your server is running or not. If you are getting a 204 No Content HTTP response, it seems that everything is configured correctly.
+4. Run InfluxDB as a service. To run InfluxDB as a Windows service the easiest way is to use nssm (Non-Sucking Service Manager) tool on Windows. To download NSSM, head over to [https://nssm.cc/download](https://nssm.cc/download). Extract it in the root InfluxDB directory you created earlier. From there, in the current NSSM folder (win64), open Command Prompt as Administrator and run the following command. Prompt as Administrator and run the following command.
+```
+nssm install
+```
+Alternatively, you can also use PowerShell and run the following command.
+```
+.\nssm.exe install
+```
+You will be prompted with the NSSM window. On the Application tab enter the following example:
+* Application Path: `C:\Users\userName\Documents\InfluxData\influxdb-1.8.1-1\influxd.exe`
+* Startup Directory: `C:\Users\userName\Documents\InfluxData\influxdb-1.8.1-1\`
+* Service Name: `influxdb`
+Once done, click `Install Service`. In the Windows search menu, type `Services` and open the `Services window`. You should now be able to start the influxdb service.
+5. Set up InfluxDB through the UI. With InfluxDB running, visit localhost:8086. This should direct you to a page as shown in the figure below. Click Get Started. Set up your initial user by entering a `Username` for your initial user. Set a `Password` and Confirm Password for your user. Enter your `Organization Name`. Enter your initial `Bucket Name`. Click `Continue`.
+6. Create your time-series database by creating a new bucket where all the data are stored. Navigation on the 'Data Explorer', at the left bottom of the page we can see the list of the buckets. Create a new one by clicking on `+ Create Bucket`. Name it anythinh you want, and note it for project reference. Back to [Node-RED flow](https://github.com/TronixLab/A-Vent-Project/blob/main/files/AVENT_IOT-NODE-RED.json), configure the influxdb node according to your InfluxDB Bucket name.
+
+### Installing PostgreSQL on Windows
+PostgreSQL or Postgres is the most commonly used open-source relational database. It offers features like robustness, reliability, cost-free, etc. PostgreSQL serves as a data warehouse for multiple applications like web apps, mobile apps, etc. It enables us to store enormous and sophisticated data securely. However, to achieve any of its functionalities or features, firstly, we have to download and install PostgreSQL. It used in this project to store string data type, however Influxdb is used over PostgreSQL to store numerical value for real-time data query and efficiency.
+1. Download the postgreSQL from this link [https://www.postgresql.org/download/](https://www.postgresql.org/download/). Select the operating system on which you want to download the PostgreSQL. In our case, its Windows operating system. Click on the 'Download the installer' option to download the interactive installer. Choose the latest PostgreSQL version for your respective operating system and click on the download button.
+2. Once the downloading is completed, open the respective `.exe` file. Specify or browse the directory where you want to install the PostgreSQL. After specifying, click on the `Next` button to proceed further.
+3. Select a `data directory` to store your data and click on the `Next` button.
+4. Set a password (must remember it for later use) for the Postgres superuser and click on the `Next` button. Whether set the port number or go with the default port number `5432` to connect to a database. After specifying, click on the `Next` button to proceed further.
+5. Once the PostgreSQL setup wizard is completed, click on the `Finish` button to close the installation windows. Click the windows button and find the `postgreSQL 14`. Once you find it click on it and select the `pgAdmin 4`. Clicking on the `pgAdmin 4` will ask you to enter the password. That was all the necessary information about downloading, installing, and launching PostgreSQL on Windows 10 operating system. You may now create your own PostgreSQL and configure your [Node-RED flow](https://github.com/TronixLab/A-Vent-Project/blob/main/files/AVENT_IOT-NODE-RED.json) according to your PostgreSQL database.
+
+### Installing Grafana on Windows
+1. Download the Windows installer package, and navigate to [Download Grafana](https://grafana.com/grafana/download).
+2. Select a Grafana version you want to install. The most recent Grafana version is selected by default.
+3. Select an Edition, you can choose either of two editions.
+a. Enterprise - Recommended download. Functionally identical to the open-source version, but includes features you can unlock with a license if you so choose.
+b. Open Source - Functionally identical to the enterprise version, but you will need to download the enterprise version if you want enterprise features.
+4. Click Windows. Then click Download the installer. This automatically downloads the installation setup. Open and run the installer. To run Grafana, open your browser and go to the Grafana port `http://localhost:3000`. The default HTTP port that Grafana listens to is `3000` unless you have configured a different port.
+5. To sign in to Grafana for the first time. Enter `admin` for username field and `password` for password field. Click Sign in. If successful, you will see a prompt to change the password. Click `OK` on the prompt and change your password. It is recommended that you change the default administrator password.
+6. Add InfluxDB as a datasource on Grafana. In the left menu, click on the `Settings` > `Data sources` section. In the `Add data source` selection panel, at Time series databases choose InfluxDB as a data source.
+Here are the configuration settings you have to match to configure InfluxDB on Grafana:
+* Name: InfluxDB
+* Query Language: Flux
+* URL: http://localhost:8086
+* Organization: ADMU (your custom organization on InfluxDB)
+* Token: XXXX (your user token on InfluxDB)
+* Default Bucket: NODE_RED (your custom database name on InfluxDB)
+
+Click on `Save and Test`, and make sure that you are not getting any errors. If you get a `502 Bad Gateway error`? Check that your URL field is set to HTTPS, or consider other fields should configure properly. If everything tests well, it's time to construct the Grafana dashboard.
+
+8. You may load the Grafana dashboard as digital twin system for A-vent project, download the json file [here](https://github.com/TronixLab/A-Vent-Project/blob/main/files/A-VENT%20Digital%20Twin%20Dashboard-Grafana.json), and load it to your Grafana.
+
+# Demonstration
 
 
 
