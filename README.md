@@ -18,6 +18,12 @@ A-vent was designed and development through the leadership of Engr. [Paul M. Cab
 ## Phase 2
 The A-vent unit was modified and made it smaller for transportation ease of the unit and designed with touch screen HMI (human machine interface). This development phase emphasized the application of [embedded machine learning (TinyML)](https://www.tinyml.org/) to detect the PVA and machine problems to generate a real-time alarms for intelligent monitoring of machine-and-patient interaction.
 
+<img src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/avent%202.1.jpg" width="15%"></img> <img src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/avent%202.2.jpg" width="15%"></img> <img src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/avent%202.3.jpg" width="15%"></img> <img src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/avent%202.4.jpg" width="15%"></img> <img src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/avent%202.5.jpg" width="15%"></img> <img src="https://github.com/TronixLab/A-Vent-Project/blob/main/media/avent%202.6.jpg" width="15%"></img> 
+
+
+asdsadasdas
+
+
 
 
 The design and development of A-vent was inspired by
